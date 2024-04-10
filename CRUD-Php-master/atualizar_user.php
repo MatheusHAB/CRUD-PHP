@@ -37,8 +37,8 @@ if(@$_REQUEST['botaoAtualizar']){
 
         $result_atualiza = mysqli_query($con, $query_atualiza);
 
-        if($result_atualiza)echo 'Usuário atualizado com sucesso!';
-        else echo '[ERRO] Erro ao atualizar o usuário.';
+        if($result_atualiza)echo "<script>alert('Usuário atualizado com sucesso!');top.location.href='menu.php';</script>";
+        else echo "<script>alert('[ERRO] Erro ao atualizar o usuário.');top.location.href='menu.php';</script>";
 }
     
 
