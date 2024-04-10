@@ -45,8 +45,8 @@ if(@$_REQUEST['botaoAtualizar']){
 
 
         $result_atualiza = mysqli_query($con, $query_atualiza);
-        if($result_atualiza)echo 'Usuário atualizado com sucesso!';
-        else echo '[ERRO] Erro ao atualizar o usuário.';
+        if($result_atualiza)echo "<script> alert('Usuário atualizado com sucesso!');top.location.href='menu.php'; </script>";
+        else echo "<script> alert('[ERRO] Erro ao atualizar o usuário.');top.location.href='menu.php'; </script>";
 
     }else echo '[ERRO] Você não tem permissão para alterar usuários.';
 }elseif(@$_REQUEST['botaoExcluir']){
@@ -56,8 +56,8 @@ if(@$_REQUEST['botaoAtualizar']){
         $query_excluir = "DELETE FROM usuario WHERE id = '$id' ";
 
         $result_excluir = mysqli_query($con, $query_excluir);
-        if($result_excluir) echo 'Registro excluido com sucesso';
-        else echo '[ERRO] Não foi possivel excluir o registro';
+        if($result_excluir) echo "<script>alert('Registro excluido com sucesso');top.location.href='menu.php';</script>";
+        else echo "<script>alert('[ERRO] Não foi possivel excluir o registro');top.location.href='menu.php';</script>";
     
     }
 }
